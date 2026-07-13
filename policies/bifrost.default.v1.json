@@ -1,0 +1,36 @@
+{
+  "id": "bifrost.default.v1",
+  "version": "1.0.0",
+  "abstainThreshold": 0.35,
+  "signalThreshold": 0.5,
+  "rules": [
+    {
+      "id": "rule.scheme.http",
+      "description": "Plain-text HTTP destination — credentials and content can be intercepted in transit.",
+      "weight": 0.45,
+      "action": "hold",
+      "match": { "case": "schemeNotIn", "value": ["https", "data", "about", "file"] }
+    },
+    {
+      "id": "rule.form.non-https",
+      "description": "Form submission to a non-HTTPS endpoint — submitted data would travel in plaintext.",
+      "weight": 0.7,
+      "action": "refuse",
+      "match": { "case": "formSubmitToNonHTTPS" }
+    },
+    {
+      "id": "rule.cred.cross-origin",
+      "description": "A password field is being auto-filled across origins, a known credential-theft pattern.",
+      "weight": 0.8,
+      "action": "refuse",
+      "match": { "case": "crossOriginCredentialField" }
+    },
+    {
+      "id": "rule.blocklist.user",
+      "description": "Destination matches an entry on the user's explicit blocklist.",
+      "weight": 0.9,
+      "action": "refuse",
+      "match": { "case": "hostIn", "value": ["evil.example.com"] }
+    }
+  ]
+}

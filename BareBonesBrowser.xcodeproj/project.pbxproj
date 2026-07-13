@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2B100012D00000100000001 /* BIFROSTBrowserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B100022D00000100000001 /* BIFROSTBrowserStatus.swift */; };
+		F2B100032D00000100000001 /* BIFROSTKit in Frameworks */ = {isa = PBXBuildFile; productRef = F2B100062D00000100000001 /* BIFROSTKit */; };
+		F2B100042D00000100000001 /* HEIMDALLKit in Frameworks */ = {isa = PBXBuildFile; productRef = F2B100072D00000100000001 /* HEIMDALLKit */; };
+		F2B100052D00000100000001 /* LUNAStore in Frameworks */ = {isa = PBXBuildFile; productRef = F2B100082D00000100000001 /* LUNAStore */; };
+		F2B1000C2D00000100000001 /* BIFROSTAnswerVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1000D2D00000100000001 /* BIFROSTAnswerVerifier.swift */; };
+		F2B1000E2D00000100000001 /* BIFROSTAnswerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1000F2D00000100000001 /* BIFROSTAnswerObserver.swift */; };
+		F2B100102D00000100000001 /* BIFROSTLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B100112D00000100000001 /* BIFROSTLocalStore.swift */; };
+		F2B100122D00000100000001 /* BIFROSTSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B100132D00000100000001 /* BIFROSTSettingsView.swift */; };
+		F2B100142D00000100000001 /* BIFROSTOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B100152D00000100000001 /* BIFROSTOnboardingView.swift */; };
 		F12606A52B7F6FB700C44851 /* BareBonesBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12606A22B7F6FB700C44851 /* BareBonesBrowserView.swift */; };
 		F12606A62B7F6FB700C44851 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12606A32B7F6FB700C44851 /* WebView.swift */; };
 		F12606A72B7F6FB700C44851 /* URLObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12606A42B7F6FB700C44851 /* URLObserver.swift */; };
@@ -16,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2B100022D00000100000001 /* BIFROSTBrowserStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTBrowserStatus.swift; sourceTree = "<group>"; };
+		F2B1000D2D00000100000001 /* BIFROSTAnswerVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTAnswerVerifier.swift; sourceTree = "<group>"; };
+		F2B1000F2D00000100000001 /* BIFROSTAnswerObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTAnswerObserver.swift; sourceTree = "<group>"; };
+		F2B100112D00000100000001 /* BIFROSTLocalStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTLocalStore.swift; sourceTree = "<group>"; };
+		F2B100132D00000100000001 /* BIFROSTSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTSettingsView.swift; sourceTree = "<group>"; };
+		F2B100152D00000100000001 /* BIFROSTOnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BIFROSTOnboardingView.swift; sourceTree = "<group>"; };
 		F12606A22B7F6FB700C44851 /* BareBonesBrowserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BareBonesBrowserView.swift; sourceTree = "<group>"; };
 		F12606A32B7F6FB700C44851 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		F12606A42B7F6FB700C44851 /* URLObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLObserver.swift; sourceTree = "<group>"; };
@@ -32,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B100032D00000100000001 /* BIFROSTKit in Frameworks */,
+				F2B100042D00000100000001 /* HEIMDALLKit in Frameworks */,
+				F2B100052D00000100000001 /* LUNAStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +62,12 @@
 				F12606A22B7F6FB700C44851 /* BareBonesBrowserView.swift */,
 				F12606A32B7F6FB700C44851 /* WebView.swift */,
 				F12606A42B7F6FB700C44851 /* URLObserver.swift */,
+				F2B100022D00000100000001 /* BIFROSTBrowserStatus.swift */,
+				F2B1000D2D00000100000001 /* BIFROSTAnswerVerifier.swift */,
+				F2B1000F2D00000100000001 /* BIFROSTAnswerObserver.swift */,
+				F2B100112D00000100000001 /* BIFROSTLocalStore.swift */,
+				F2B100132D00000100000001 /* BIFROSTSettingsView.swift */,
+				F2B100152D00000100000001 /* BIFROSTOnboardingView.swift */,
 			);
 			name = BareBonesBrowserKit;
 			path = Sources/BareBonesBrowserKit;
@@ -102,6 +126,11 @@
 			dependencies = (
 			);
 			name = BareBonesBrowser;
+			packageProductDependencies = (
+				F2B100062D00000100000001 /* BIFROSTKit */,
+				F2B100072D00000100000001 /* HEIMDALLKit */,
+				F2B100082D00000100000001 /* LUNAStore */,
+			);
 			productName = BareBonesBrowser;
 			productReference = F1CC8AA72B7236F7001C2BBF /* BareBonesBrowser.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +159,11 @@
 				Base,
 			);
 			mainGroup = F1CC8A9E2B7236F7001C2BBF;
+			packageReferences = (
+				F2B100092D00000100000001 /* XCLocalSwiftPackageReference "Packages/BIFROSTKit" */,
+				F2B1000A2D00000100000001 /* XCLocalSwiftPackageReference "Packages/HEIMDALLKit" */,
+				F2B1000B2D00000100000001 /* XCLocalSwiftPackageReference "Packages/LUNAStore" */,
+			);
 			productRefGroup = F1CC8AA82B7236F7001C2BBF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,10 +194,49 @@
 				F1CC8AAB2B7236F7001C2BBF /* BareBonesBrowserApp.swift in Sources */,
 				F12606A52B7F6FB700C44851 /* BareBonesBrowserView.swift in Sources */,
 				F12606A72B7F6FB700C44851 /* URLObserver.swift in Sources */,
+				F2B100012D00000100000001 /* BIFROSTBrowserStatus.swift in Sources */,
+				F2B1000C2D00000100000001 /* BIFROSTAnswerVerifier.swift in Sources */,
+				F2B1000E2D00000100000001 /* BIFROSTAnswerObserver.swift in Sources */,
+				F2B100102D00000100000001 /* BIFROSTLocalStore.swift in Sources */,
+				F2B100122D00000100000001 /* BIFROSTSettingsView.swift in Sources */,
+				F2B100142D00000100000001 /* BIFROSTOnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F2B100092D00000100000001 /* XCLocalSwiftPackageReference "Packages/BIFROSTKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/BIFROSTKit;
+		};
+		F2B1000A2D00000100000001 /* XCLocalSwiftPackageReference "Packages/HEIMDALLKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/HEIMDALLKit;
+		};
+		F2B1000B2D00000100000001 /* XCLocalSwiftPackageReference "Packages/LUNAStore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/LUNAStore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2B100062D00000100000001 /* BIFROSTKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B100092D00000100000001 /* XCLocalSwiftPackageReference "Packages/BIFROSTKit" */;
+			productName = BIFROSTKit;
+		};
+		F2B100072D00000100000001 /* HEIMDALLKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B1000A2D00000100000001 /* XCLocalSwiftPackageReference "Packages/HEIMDALLKit" */;
+			productName = HEIMDALLKit;
+		};
+		F2B100082D00000100000001 /* LUNAStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B1000B2D00000100000001 /* XCLocalSwiftPackageReference "Packages/LUNAStore" */;
+			productName = LUNAStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F1CC8AB42B723707001C2BBF /* Debug */ = {
@@ -287,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BareBonesBrowser/BareBonesBrowser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"BareBonesBrowser/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -295,7 +368,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allows you to upload photographs and videos";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 DuckDuckGo. All rights reserved.";
+				INFOPLIST_KEY_CFBundleDisplayName = BIFROST;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 JourdanLabs. Portions derived from DuckDuckGo BareBonesBrowser.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allows you to share recordings";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -311,9 +386,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.duckduckgo.BareBonesBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jourdanlabs.bifrost-browser";
+				PRODUCT_NAME = BIFROST;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -329,7 +404,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BareBonesBrowser/BareBonesBrowser.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"BareBonesBrowser/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -337,7 +412,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allows you to upload photographs and videos";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2024 DuckDuckGo. All rights reserved.";
+				INFOPLIST_KEY_CFBundleDisplayName = BIFROST;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 JourdanLabs. Portions derived from DuckDuckGo BareBonesBrowser.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allows you to share recordings";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -353,9 +430,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.duckduckgo.BareBonesBrowser;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jourdanlabs.bifrost-browser";
+				PRODUCT_NAME = BIFROST;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;

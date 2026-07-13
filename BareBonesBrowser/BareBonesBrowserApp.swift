@@ -19,6 +19,9 @@
 
 import SwiftUI
 import WebKit
+#if os(macOS)
+import AppKit
+#endif
 
 enum UserAgent: String {
     case macOS = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
@@ -33,14 +36,13 @@ struct BareBonesBrowserApp: App {
     static var webViewConfiguration: WKWebViewConfiguration = {
         let configuration = WKWebViewConfiguration()
         configuration.websiteDataStore = WKWebsiteDataStore.nonPersistent()
-        configuration.processPool = WKProcessPool() //Need to reuse the same process pool to achieve cross-window cookie sharing
         return configuration
     }()
 
 #if os(macOS)
     var body: some Scene {
-        WindowGroup("Bare Bones Browser", for: URL.self) { $url in
-            BareBonesBrowserView(initialURL: homeURL, 
+        WindowGroup("BIFROST", for: URL.self) { $url in
+            BareBonesBrowserView(initialURL: url ?? homeURL,
                                  homeURL: homeURL,
                                  uiDelegate: self,
                                  configuration: Self.webViewConfiguration,
@@ -50,7 +52,7 @@ struct BareBonesBrowserApp: App {
     }
 #else
     var body: some Scene {
-        WindowGroup("Bare Bones Browser", for: URL.self) { $url in
+        WindowGroup("BIFROST", for: URL.self) { $url in
             BareBonesBrowserView(initialURL: url ?? homeURL,
                                  homeURL: homeURL,
                                  configuration: Self.webViewConfiguration,
@@ -67,7 +69,40 @@ extension BareBonesBrowserApp: BareBonesBrowserUIDelegate {
         guard let url = urlRequest.url else {
             return
         }
-        openWindow(value: url)
+        let rootView = BareBonesBrowserView(
+            initialURL: url,
+            homeURL: homeURL,
+            uiDelegate: self,
+            configuration: Self.webViewConfiguration,
+            userAgent: UserAgent.macOS.rawValue
+        )
+        .frame(minWidth: 640, maxWidth: .infinity, minHeight: 480, maxHeight: .infinity)
+
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 1000, height: 720),
+            styleMask: [.titled, .closable, .miniaturizable, .resizable],
+            backing: .buffered,
+            defer: false
+        )
+        window.title = "BIFROST"
+        window.contentView = NSHostingView(rootView: rootView)
+        window.center()
+
+        let controller = NSWindowController(window: window)
+        BIFROSTWindowRegistry.shared.retain(controller)
+        controller.showWindow(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+}
+
+@MainActor
+private final class BIFROSTWindowRegistry {
+    static let shared = BIFROSTWindowRegistry()
+
+    private var controllers: [NSWindowController] = []
+
+    func retain(_ controller: NSWindowController) {
+        controllers.append(controller)
     }
 }
 #endif

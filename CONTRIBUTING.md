@@ -1,29 +1,38 @@
-# Contributing to DuckDuckGo
+# Contributing to BIFROST Browser
 
-Thank you for taking the time to contribute to DuckDuckGo! :sparkles:
+Thank you for helping improve BIFROST Browser.
 
-We are pleased to open up the project to you - our community. How can you contribute?
+## Before opening a change
 
-## Share feedback
-Contact us at https://duckduckgo.com/feedback if you have feedback, questions or want to chat. You can also use the feedback form embedded within our Mobile App - to do so please navigate to Settings and select "Send Feedback".
+- Use a focused branch and keep generated `build/` artifacts out of Git.
+- Open an issue before large feature or policy changes so the trust boundary can be reviewed first.
+- Never add an authorization verdict, persistent allowlist, remote telemetry, or autonomous action path.
+- Keep answer-verifier claims calibrated to what the deterministic code actually proves.
+- Do not change the LUNA row shape, genesis semantics, or chain verification without an explicit design proposal and migration tests.
 
-## Report an issue
-A great way to contribute to the project is to report an issue when you encounter a problem.
+## Validation
 
-We want our app to be as stable as possible thus your bug reports are immensely valuable. When reporting bugs let us know the:
-* App version
-* Device model
-* iOS version
-* Steps to reproduce the bug
-* Expected behavior
-* Actual behavior
+Every pull request must pass:
 
-If you have encountered a security issue, please reach us through https://hackerone.com/duckduckgo.
+```bash
+Scripts/oss-preflight.sh
+Scripts/acceptance.sh
+```
 
-## Contributing Code
+Add tests for behavior changes. Refusal and continuation changes must prove both the allowed and refused path, including the resulting LUNA row.
 
-We're always open to contributions from the community! There are different approaches depending on how you wish to contribute:
+## Pull requests
 
-* **For bug fixes**, feel free to open a pull request along with an associated issue. Someone from the team will review your issue/change within a few days.
-* **For new features**, start by logging an issue with a description of your idea. Proposals that fit our product direction and timeline will be added to our backlog and labelled accordingly.
-* If you're looking for a bug to work on, see the [Help Wanted](https://github.com/duckduckgo/iOS/issues?q=is%3Aissue+is%3Aopen+label%3A%22Help+Wanted%22) tag for a list of open issues.
+Describe:
+
+- what changed and why;
+- user-visible behavior;
+- trust or privacy impact;
+- tests and manual checks performed;
+- any remaining limitation.
+
+Small, reviewable changes are preferred.
+
+## Bugs and feature requests
+
+Use GitHub Issues and include the app version, macOS/iOS version, reproduction steps, expected behavior, and actual behavior. Do not place security vulnerabilities or sensitive browsing data in a public issue; use the process in [SECURITY.md](SECURITY.md).
