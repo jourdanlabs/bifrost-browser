@@ -100,6 +100,7 @@ history_contains_path() {
 
 federico_public_email='kap.posta@''gmail.com'
 jaryd_public_email='github@jaryd.org'
+jourdanlabs_public_email='leland@''jourdanlabs.com'
 
 email_is_allowlisted() {
   local email="$1"
@@ -110,7 +111,9 @@ email_is_allowlisted() {
     return 1
   fi
 
-  if [[ "$normalized" == "$federico_public_email" || "$normalized" == "$jaryd_public_email" ]]; then
+  if [[ "$normalized" == "$federico_public_email" \
+    || "$normalized" == "$jaryd_public_email" \
+    || "$normalized" == "$jourdanlabs_public_email" ]]; then
     return 0
   fi
 
