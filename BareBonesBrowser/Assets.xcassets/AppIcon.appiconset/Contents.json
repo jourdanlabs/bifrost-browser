@@ -1,67 +1,67 @@
 {
   "images" : [
     {
-      "filename" : "dax_skeleton_round-1024 1.png",
+      "filename" : "babypulsar-bifrost-1024.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
-      "filename" : "dax_skeleton_round-16.png",
+      "filename" : "babypulsar-bifrost-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "dax_skeleton_round-32.png",
+      "filename" : "babypulsar-bifrost-32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "dax_skeleton_round-32.png",
+      "filename" : "babypulsar-bifrost-32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "dax_skeleton_round-64.png",
+      "filename" : "babypulsar-bifrost-64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "dax_skeleton_round-128.png",
+      "filename" : "babypulsar-bifrost-128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "dax_skeleton_round-256.png",
+      "filename" : "babypulsar-bifrost-256.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "dax_skeleton_round-256.png",
+      "filename" : "babypulsar-bifrost-256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "dax_skeleton_round-512.png",
+      "filename" : "babypulsar-bifrost-512.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "dax_skeleton_round-512.png",
+      "filename" : "babypulsar-bifrost-512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "dax_skeleton_round-1024.png",
+      "filename" : "babypulsar-bifrost-1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

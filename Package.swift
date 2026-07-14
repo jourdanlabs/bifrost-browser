@@ -6,8 +6,8 @@ import PackageDescription
 let package = Package(
     name: "BareBonesBrowserKit",
     platforms: [
-        .macOS(.v11),
-        .iOS(.v14)
+        .macOS(.v14),
+        .iOS(.v16)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -16,11 +16,30 @@ let package = Package(
             targets: ["BareBonesBrowserKit"]
         )
     ],
+    dependencies: [
+        .package(path: "Packages/BIFROSTKit"),
+        .package(path: "Packages/HEIMDALLKit"),
+        .package(path: "Packages/LUNAStore")
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "BareBonesBrowserKit"
+            name: "BareBonesBrowserKit",
+            dependencies: [
+                "BIFROSTKit",
+                "HEIMDALLKit",
+                "LUNAStore"
+            ]
+        ),
+        .testTarget(
+            name: "BareBonesBrowserKitTests",
+            dependencies: [
+                "BareBonesBrowserKit",
+                "BIFROSTKit",
+                "HEIMDALLKit",
+                "LUNAStore"
+            ]
         )
     ]
 )
